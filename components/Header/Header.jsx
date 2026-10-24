@@ -26,6 +26,10 @@ const NAV_ITEMS = {
 
 const isSectionLink = (href) => href.startsWith("#");
 
+// Distance from the top of the document (offsetTop is relative to the nearest
+// positioned ancestor, which is wrong for sections inside positioned wrappers)
+const pageTop = (element) => element.getBoundingClientRect().top + window.scrollY;
+
 function scrollToSection(event, href) {
   if (href === "/") {
     event.preventDefault();
@@ -36,7 +40,7 @@ function scrollToSection(event, href) {
   const target = document.querySelector(href);
   if (!target) return;
   event.preventDefault();
-  window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
+  window.scrollTo({ top: pageTop(target) - 80, behavior: "smooth" });
 }
 
 function Navigation({ items, activeLabel, onNavigate }) {
@@ -78,13 +82,19 @@ export default function Header({ variant = "home", activeLabel: fixedActive }) {
       for (const item of items) {
         if (!isSectionLink(item.href)) continue;
         const section = document.querySelector(item.href);
-        if (section && section.offsetTop - 90 <= scrollY) current = item.label;
+        if (section && pageTop(section) - 90 <= scrollY) current = item.label;
       }
       setSpyActive(current);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    // Section offsets change as images load, so re-check when the page resizes
+    const resizeObserver = new ResizeObserver(onScroll);
+    resizeObserver.observe(document.body);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      resizeObserver.disconnect();
+    };
   }, [isHome, items]);
 
   useEffect(() => {
