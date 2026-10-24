@@ -1,0 +1,87 @@
+/*=============================
+	Founders
+===============================*/
+
+.founder-card {
+    background: var(--tg-secondary-color2);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 50px 65px;
+}
+
+.founder-card .founder-card-img img {
+    transition: 0.4s;
+    border-radius: 15px;
+}
+
+.founder-card .founder-card-title {
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--tg-white);
+    letter-spacing: -0.03em;
+    margin-bottom: 15px;
+    transition: .3s;
+}
+
+.founder-card .founder-card-title:hover {
+    color: var(--tg-primary-color);
+}
+
+.founder-card .founder-card-desig {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.founder-card .social-btn a {
+    background: var(--tg-white);
+    color: #5729D6;
+    font-size: 18px;
+}
+
+.founder-card .social-btn a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--tg-white);
+}
+
+.founder-card:hover .founder-card-img img {
+    transform: scale(1.05);
+}
+
+/*=============================
+	Responsive
+===============================*/
+
+@media (max-width: 1399px) {
+    .founder-card {
+        padding: 50px 55px;
+    }
+    .founder-card .founder-card-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .founder-card {
+        padding: 40px 45px;
+    }
+    .founder-card .founder-card-img {
+        height: 155px;
+        width: 140px;
+    }
+}
+
+@media (max-width: 575px) {
+    .founder-card {
+        padding: 40px;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .founder-card .social-btn {
+        justify-content: center;
+    }
+}

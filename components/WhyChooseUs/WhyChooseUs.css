@@ -1,0 +1,148 @@
+/*=============================
+	Why Choose Us
+===============================*/
+
+.wcu-thumb img {
+    width: 256px;
+    height: 256px;
+    object-fit: contain;
+}
+
+.wcu-amount-quantity {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.wcu-amount-quantity .title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--tg-white);
+    margin-bottom: 10px;
+}
+
+.wcu-price-progress-wrap {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wcu-price-progress-wrap li:not(:last-child) {
+    margin-bottom: 82px;
+}
+
+.wcu-price-progress-wrap .progress-wrap-title {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--tg-body-font-family);
+    margin-bottom: 5px;
+}
+
+.wcu-price-progress-wrap .skill-feature .progress:after {
+    content: "";
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    right: 0;
+    background: var(--tg-primary-color);
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+
+.wcu-price-progress-wrap .skill-feature .progress-value {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--tg-white);
+    margin-right: 65px;
+    margin-top: 9px;
+    letter-spacing: 0.02em;
+    margin-bottom: -0.3em;
+}
+
+/* Feature Card */
+
+.feature-card {
+    box-shadow: 0px 16px 18px rgba(1, 12, 50, 0.1);
+    border-radius: 15px;
+    background: var(--tg-black2);
+    max-width: 570px;
+    min-height: 206px;
+    margin-left: auto;
+    display: flex;
+    padding: 40px;
+    gap: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.feature-card:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.feature-card-details {
+    max-width: 220px;
+    margin-bottom: -0.4em;
+}
+
+.feature-card-icon {
+    background: var(--tg-primary-color);
+    border-radius: 50%;
+    flex: none;
+    width: 82px;
+    height: 82px;
+    line-height: 82px;
+    text-align: center;
+}
+
+.feature-card-icon img {
+    transition: 0.4s;
+}
+
+.feature-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.5em;
+    margin-bottom: 18px;
+}
+
+.feature-card-text {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.feature-card-text:last-child {
+    margin-bottom: 0;
+}
+
+.feature-card:hover .feature-card-icon img {
+    transform: rotateY(180deg);
+}
+
+/*=============================
+	Responsive
+===============================*/
+
+@media (max-width: 991px) {
+    .feature-card {
+        margin-left: 0;
+        max-width: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .wcu-amount-quantity .title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .feature-card {
+        padding: 30px;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,148 @@
+/*=============================
+	Contact
+===============================*/
+
+.contact-info-wrap {
+    margin-bottom: 110px;
+}
+
+.contact-info-item {
+    text-align: center;
+    background: var(--tg-secondary-color);
+    border-radius: 30px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(43 44 56 / 46%);
+    padding: 60px 30px 50px;
+}
+
+.contact-info-item .icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #292A37;
+    margin: 0 auto 20px;
+    font-size: 20px;
+    color: var(--tg-white);
+    line-height: 1;
+}
+
+.contact-info-item .content .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-info-item .content p {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.contact-info-item .content a {
+    color: var(--tg-paragraph-color);
+}
+
+.contact-info-item .content a:hover {
+    color: var(--tg-primary-color);
+}
+
+.contact-form-wrap .col-57 {
+    width: 57%;
+    flex: 0 0 auto;
+}
+
+.contact-form {
+    background: var(--tg-secondary-color);
+    border-radius: 0 15px 15px 0;
+    padding: 50px 50px;
+}
+
+.contact-form .title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* The original contact.html had no doctype, so browsers rendered it in
+   quirks mode, which adds a 1em bottom margin to forms. Kept for parity. */
+.contact-form form {
+    margin-bottom: 1em;
+}
+
+.contact-form .row {
+    --bs-gutter-x: 20px;
+}
+
+.contact-form .form-grp {
+    margin-bottom: 20px;
+}
+
+.contact-form .form-grp textarea,
+.contact-form .form-grp input {
+    width: 100%;
+    background: rgba(255 255 255 / 7%);
+    display: block;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 30px;
+    color: var(--tg-white);
+    line-height: 1;
+    height: 50px;
+}
+
+.contact-form .form-grp textarea::placeholder,
+.contact-form .form-grp input::placeholder {
+    color: #AAABB2;
+}
+
+.contact-form .form-grp textarea {
+    min-height: 160px;
+    max-height: 160px;
+}
+
+.contact-form .btn:hover {
+    background: var(--tg-primary-color);
+}
+
+/*=============================
+	Responsive
+===============================*/
+
+@media (max-width: 1199.98px) {
+    .contact-form {
+        padding: 50px 30px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .contact-form-wrap .col-57 {
+        width: 100%;
+    }
+    .contact-form {
+        padding: 50px 40px;
+        border-radius: 15px 15px 0 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contact-form {
+        padding: 40px 20px;
+        border-radius: 15px 15px 0 0;
+    }
+    .contact-form .title {
+        font-size: 24px;
+    }
+    .contact-area {
+        padding: 100px 0;
+    }
+    .contact-info-wrap {
+        margin-bottom: 70px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .contact-form {
+        padding: 50px 30px;
+    }
+}

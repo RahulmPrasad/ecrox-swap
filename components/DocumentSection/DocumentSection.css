@@ -1,0 +1,175 @@
+/*=============================
+	Document
+===============================*/
+
+.document-area {
+    position: relative;
+    z-index: 2;
+}
+
+.document-inner-wrap .row {
+    --bs-gutter-x: 20px;
+}
+
+.document-form-wrap {
+    background: var(--tg-secondary-color);
+    border: 1px solid rgba(43 44 56 / 46%);
+    padding: 60px 50px 50px;
+    text-align: center;
+    border-radius: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.document-form-wrap .title {
+    font-size: 28px;
+    margin-bottom: 35px;
+}
+
+/* Quirks-mode parity with the original page (see ContactSection.css) */
+.document-form-wrap form {
+    margin-bottom: 1em;
+}
+
+.document-form-wrap .row {
+    --bs-gutter-x: 20px;
+}
+
+.document-form-wrap .form-grp {
+    margin-bottom: 20px;
+}
+
+.document-form-wrap .form-grp textarea,
+.document-form-wrap .form-grp input {
+    width: 100%;
+    background: rgba(255 255 255 / 7%);
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    color: var(--tg-white);
+    padding: 15px 20px;
+    line-height: 1;
+    height: 50px;
+    display: block;
+}
+
+.document-form-wrap .form-grp textarea::placeholder,
+.document-form-wrap .form-grp input::placeholder {
+    font-size: 16px;
+    color: #AAABB2;
+    line-height: 1;
+}
+
+.document-form-wrap .form-grp textarea {
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.document-form-wrap form .btn {
+    margin-top: 15px;
+}
+
+.document-wrap .btn:hover,
+.document-form-wrap form .btn:hover {
+    background: var(--tg-primary-color);
+}
+
+.document-wrap {
+    background: var(--tg-secondary-color);
+    border: 1px solid rgba(43 44 56 / 46%);
+    padding: 60px 64px 50px;
+    border-radius: 15px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.document-wrap .title {
+    margin-bottom: 35px;
+    font-size: 28px;
+}
+
+.document-wrap .list-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+/* Matches the shorter line box the original got from quirks mode */
+.document-wrap .list-wrap li {
+    line-height: 22.68px;
+}
+
+.document-wrap .list-wrap a {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--tg-white);
+}
+
+.document-wrap .list-wrap a:hover {
+    color: var(--tg-primary-color);
+}
+
+.document-wrap .list-wrap a .icon {
+    width: 130px;
+    height: 104px;
+    background: rgba(255 255 255 / 7%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tg-white);
+    font-size: 35px;
+    line-height: 0;
+    margin-bottom: 5px;
+}
+
+/*=============================
+	Responsive
+===============================*/
+
+@media (max-width: 1199.98px) {
+    .document-form-wrap {
+        padding: 50px 30px 40px;
+    }
+    .document-wrap {
+        padding: 50px 25px 40px;
+    }
+    .document-wrap .list-wrap a .icon {
+        width: 110px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .document-form-wrap {
+        height: auto;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .document-form-wrap {
+        padding: 50px 20px 40px;
+    }
+    .document-wrap {
+        padding: 50px 20px 40px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .document-form-wrap {
+        padding: 50px 30px 40px;
+    }
+    .document-wrap {
+        padding: 50px 30px 40px;
+    }
+}

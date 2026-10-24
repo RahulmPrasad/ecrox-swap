@@ -1,0 +1,151 @@
+/*=============================
+	Footer (home page, layout 1)
+===============================*/
+
+/* The other sections size their glow from bg-gradient1-1.jpg, which has
+   static line art baked into its bottom-left corner. The footer uses a
+   transparent box with the image's proportions instead, so the glow is
+   the same without those lines. */
+.footer-layout1 .bg-gradient-1 {
+    aspect-ratio: 1920 / 1186;
+}
+
+/* Animated rings behind the footer, clipped to the footer's box so they
+   don't spill into the FAQ section above */
+.footer-ripple {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.footer-ripple .ripple-shape {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+
+.footer-ripple .ripple-shape span {
+    top: -350px;
+}
+
+.footer-menu-area {
+    border-bottom: 1px solid var(--tg-white);
+    padding: 0 0 57px;
+}
+
+.footer-menu-area .footer-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 15px 45px;
+}
+
+.footer-menu-area .footer-menu-list li {
+    display: inline-block;
+}
+
+.footer-menu-area .footer-menu-list li a {
+    display: block;
+    position: relative;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: var(--tg-body-font-color);
+    color: var(--tg-white);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+}
+
+.footer-menu-area .footer-menu-list li a:hover {
+    color: var(--tg-primary-color);
+}
+
+.copyright-wrap {
+    padding: 12px 0 50px;
+}
+
+.footer-layout1 .copyright-text {
+    margin: 0;
+    color: var(--tg-white);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.footer-layout1 .copyright-text a {
+    color: var(--tg-white);
+}
+
+.footer-layout1 .copyright-text a:hover {
+    color: var(--tg-primary-color);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 15px 40px;
+    justify-content: center;
+}
+
+.footer-links li {
+    display: inline-block;
+}
+
+.footer-links li a {
+    display: block;
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: var(--tg-body-font-family);
+    color: var(--tg-white);
+}
+
+.footer-links li a:hover {
+    color: var(--tg-primary-color);
+}
+
+/*=============================
+	Responsive
+===============================*/
+
+@media (max-width: 1199px) {
+    .footer-menu-area .footer-menu-list {
+        gap: 15px 28px;
+    }
+}
+
+@media (max-width: 991px) {
+    .copyright-wrap {
+        padding: 22px 0;
+    }
+    .footer-menu-area {
+        padding: 0 0 27px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-menu-area .footer-menu-list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .footer-links {
+        gap: 15px 30px;
+    }
+    .footer-menu-area .footer-menu-list {
+        display: block;
+    }
+    .footer-menu-area .footer-menu-list li {
+        display: block;
+    }
+    .footer-menu-area .footer-menu-list li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,64 @@
+/*=============================
+	Intro
+===============================*/
+
+.intro-thumb1 {
+    position: relative;
+    text-align: center;
+    margin-top: -130px;
+}
+
+.intro-thumb1 img {
+    width: 276px;
+    height: 344px;
+    object-fit: contain;
+}
+
+.intro-thumb1:after {
+    content: "";
+    position: absolute;
+    width: 479.43px;
+    height: 71.62px;
+    background: linear-gradient(0.41deg, var(--tg-primary-color) 7.48%, rgba(46, 32, 255, 0.27) 36.38%, var(--tg-secondary-color) 67.11%);
+    filter: blur(23px);
+    border-radius: 50%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+}
+
+.intro-wrap:not(:last-child) {
+    margin-bottom: 70px;
+}
+
+.intro-wrap .intro-wrap-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.intro-wrap .intro-wrap-title:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: var(--tg-primary-color);
+    margin-right: 9px;
+}
+
+.intro-wrap .intro-wrap-text {
+    margin-bottom: -0.4em;
+}
+
+/*=============================
+	Responsive
+===============================*/
+
+@media (max-width: 1199px) {
+    .intro-thumb1 {
+        margin-top: 70px;
+    }
+}

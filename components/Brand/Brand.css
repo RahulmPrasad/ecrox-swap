@@ -1,0 +1,98 @@
+/*=============================
+	Brand / Partners
+===============================*/
+
+.brand-title {
+    margin-bottom: 60px;
+}
+
+.brand-title .title {
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.26px;
+    padding: 0 18px;
+}
+
+.brand-title .title::after,
+.brand-title .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--tg-primary-color);
+}
+
+.brand-title .title::after {
+    left: auto;
+    right: 0;
+}
+
+.brand-item-wrap {
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    position: relative;
+    padding: 45px 0;
+}
+
+.brand-item-wrap::after,
+.brand-item-wrap::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18%;
+    height: 100%;
+    background: linear-gradient(90deg, #010314 0%, rgba(1, 3, 20, 0.00) 100%);
+    z-index: 5;
+}
+
+.brand-item-wrap::after {
+    left: auto;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+/* Style 2: arrow notch on top instead of side fades */
+.brand-item-wrap.style2:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    background: var(--tg-secondary-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg) translate(-50%, 50%);
+    left: 50%;
+    top: -17px;
+    z-index: 1;
+}
+
+.brand-item-wrap.style2:before {
+    display: none;
+}
+
+.brand-item {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-item img {
+    opacity: .5;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.brand-item img:hover {
+    opacity: 1;
+}

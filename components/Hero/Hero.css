@@ -1,0 +1,344 @@
+/*=============================
+	Hero
+===============================*/
+
+.hero-1 {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 145px;
+}
+
+.hero-1 .hero-bg-gradient {
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+    background: linear-gradient(0.41deg, var(--tg-primary-color) 19.48%, rgba(46, 32, 255, 0.27) -13.62%, var(--tg-black) 267.11%);
+    filter: blur(225px);
+    top: -1292px;
+    width: 1873px;
+    height: 2191px;
+    transform: translate(-50%, 0);
+    border-radius: 0 0 50% 50%;
+}
+
+.hero-title {
+    margin-bottom: 0;
+    color: var(--tg-white);
+    font-weight: 700;
+    letter-spacing: -2.8px;
+    font-size: 70px;
+    line-height: 1.2857;
+}
+
+.hero-title .h1-hero {
+    color: #fa3d56;
+}
+
+.hero-style1 {
+    position: relative;
+    z-index: 6;
+    padding: 220px 0 30px;
+}
+
+.hero-style1 .btn-wrap {
+    margin-top: 43px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px 15px;
+}
+
+/* Currency exchange box */
+
+.hero-countdown-wrap {
+    background: var(--tg-black2);
+    border-radius: 16px;
+    text-align: center;
+    padding: 80px 90px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    margin-top: 30px;
+}
+
+.hero-countdown-wrap .banner-countdown-wrap {
+    margin-top: 70px;
+}
+
+.coming-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 75px;
+}
+
+.hero-countdown-wrap .hero-countdown-wrap-title {
+    color: var(--tg-white);
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: -0.25em;
+}
+
+.hero-countdown-wrap .skill-feature_list {
+    list-style: none;
+    padding: 0;
+    margin: 37px 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.hero-countdown-wrap .skill-feature_list li {
+    color: var(--tg-white);
+    text-align: left;
+    position: relative;
+}
+
+.hero-countdown-wrap .skill-feature_list li:after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 19px;
+    border-bottom: solid 19px var(--tg-secondary-color);
+    border-left: solid 11px transparent;
+    border-right: solid 11px transparent;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 26px);
+}
+
+.hero-countdown-wrap .skill-feature_list li:first-child {
+    width: 245px;
+    padding-left: 24px;
+}
+
+.hero-countdown-wrap .skill-feature_list li:nth-child(2) {
+    width: 240px;
+    text-align: center;
+}
+
+.hero-countdown-wrap .skill-feature_list li:last-child {
+    margin: 0 auto;
+}
+
+.hero-countdown-wrap .skill-feature_list li span {
+    display: block;
+}
+
+.hero-countdown-wrap .skill-feature_list li h4 {
+    color: var(--tg-white);
+    margin-bottom: 0;
+}
+
+.hero-countdown-wrap .skill-feature_list.style2 {
+    margin-top: 17px;
+    align-items: start;
+}
+
+.hero-countdown-wrap .skill-feature_list.style2 li:first-child {
+    padding-left: 0;
+    text-align: center;
+}
+
+.hero-countdown-wrap .skill-feature_list.style2 li:after {
+    display: none;
+}
+
+.hero-countdown-wrap .skill-feature {
+    background: var(--tg-secondary-color);
+    border-radius: 8px;
+    padding: 43px 36px 43px 24px;
+    display: flex;
+    gap: 27px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0 !important;
+}
+
+.hero-countdown-wrap .skill-feature:after,
+.hero-countdown-wrap .skill-feature:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0.5px;
+    background: #1C1D34;
+    top: 0;
+    left: 22%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.hero-countdown-wrap .skill-feature:after {
+    left: 43.5%;
+}
+
+.hero-countdown-wrap .skill-feature .progress {
+    border: 1px solid #1C1D34;
+    background: transparent;
+    height: 26px;
+    border-radius: 13px;
+    width: 100%;
+}
+
+.hero-countdown-wrap .skill-feature .progress .progress-bar {
+    background: linear-gradient(270deg, var(--tg-primary-color) -3.08%, rgba(46, 32, 255, 0.27) 46.64%, var(--tg-black) 99.52%);
+    height: 16px;
+    border-radius: 25px;
+    margin: 4px;
+}
+
+.hero-countdown-wrap .skill-feature .progress-value-max {
+    flex: none;
+    color: var(--tg-white);
+}
+
+/*=============================
+	Responsive
+===============================*/
+
+@media (max-width: 1399px) {
+    .hero-title {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 1299px) {
+    .hero-title {
+        font-size: 50px;
+        letter-spacing: normal;
+    }
+    .hero-countdown-wrap .skill-feature:before {
+        left: 26%;
+    }
+    .hero-countdown-wrap .skill-feature:after {
+        left: 52%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .hero-1 .hero-bg-gradient {
+        top: -1400px;
+    }
+    .hero-1 {
+        padding-bottom: 120px;
+    }
+    .hero-countdown-wrap .skill-feature:before {
+        left: 25%;
+    }
+    .hero-countdown-wrap .skill-feature_list li:first-child {
+        width: 190px;
+    }
+    .hero-countdown-wrap .skill-feature_list li:nth-child(2) {
+        width: 200px;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-1 {
+        padding-bottom: 100px;
+    }
+    .hero-title {
+        font-size: 40px;
+    }
+    .hero-style1 {
+        padding: 170px 0 100px;
+        text-align: center;
+    }
+    .hero-style1 .btn-wrap {
+        justify-content: center;
+    }
+    .hero-countdown-wrap {
+        padding: 60px 50px;
+    }
+    .hero-countdown-wrap .banner-countdown-wrap .coming-time {
+        gap: 30px 49px;
+    }
+    .hero-countdown-wrap .hero-countdown-wrap-title {
+        font-size: 30px;
+    }
+    .hero-countdown-wrap .skill-feature_list li:first-child {
+        width: 170px;
+        padding-left: 0;
+    }
+    .hero-countdown-wrap .skill-feature_list li:nth-child(2) {
+        width: 140px;
+    }
+    .hero-countdown-wrap .skill-feature:before {
+        left: 28%;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 36px;
+        letter-spacing: normal;
+    }
+    .hero-style1 {
+        padding: 150px 0 100px;
+    }
+    .hero-countdown-wrap {
+        padding: 40px 30px;
+    }
+    .hero-countdown-wrap .banner-countdown-wrap .coming-time {
+        gap: 30px 60px;
+    }
+    .hero-countdown-wrap .hero-countdown-wrap-title {
+        font-size: 24px;
+    }
+    .hero-countdown-wrap .skill-feature_list li {
+        font-size: 14px;
+    }
+    .hero-countdown-wrap .skill-feature_list li:first-child {
+        width: 140px;
+    }
+    .hero-countdown-wrap .skill-feature {
+        padding: 40px 20px;
+    }
+    .hero-countdown-wrap .skill-feature:before {
+        left: 31%;
+    }
+    .hero-countdown-wrap .skill-feature:after {
+        left: 61%;
+    }
+    .hero-countdown-wrap .skill-feature .progress-value-max {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .coming-time {
+        gap: 20px 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-style1 {
+        padding: 150px 0 80px;
+    }
+    .hero-countdown-wrap .skill-feature_list li:after {
+        display: none;
+    }
+    .hero-countdown-wrap .skill-feature_list li:first-child {
+        width: 100px;
+    }
+    .hero-countdown-wrap .skill-feature_list li:nth-child(2) {
+        width: 100px;
+    }
+    .hero-countdown-wrap .skill-feature {
+        background: transparent;
+        padding: 0;
+    }
+    .hero-countdown-wrap .skill-feature:after,
+    .hero-countdown-wrap .skill-feature:before {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 34px;
+    }
+    .hero-countdown-wrap {
+        padding: 40px 20px;
+    }
+}

@@ -1,0 +1,77 @@
+/*=============================
+	Events
+===============================*/
+
+.event-area {
+    padding-bottom: 80px;
+}
+
+.event-card-img {
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.event-card-img a {
+    display: inline-block;
+    width: 100%;
+}
+
+.event-card-img a img {
+    transition: 0.5s;
+    width: 100%;
+}
+
+.event-card-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 11px;
+}
+
+.event-card-title a {
+    color: inherit;
+}
+
+.event-card-title:hover {
+    color: var(--tg-primary-color);
+}
+
+.event-card .event-meta a {
+    display: flex;
+    gap: 8px;
+    color: var(--tg-white);
+    align-items: center;
+}
+
+.event-card .event-meta a i {
+    color: var(--tg-primary-color);
+}
+
+.event-card .event-meta a:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.event-card .event-meta a:hover {
+    color: var(--tg-primary-color);
+}
+
+.event-card .btn {
+    margin-top: 30px;
+    letter-spacing: -0.01em;
+    min-width: 155px;
+    padding: 11.5px 40px;
+}
+
+.event-card:hover .event-card-img img {
+    transform: scale(1.05);
+}
+
+/*=============================
+	Responsive
+===============================*/
+
+@media (max-width: 1199px) {
+    .event-card .event-card-title {
+        font-size: 20px;
+    }
+}
